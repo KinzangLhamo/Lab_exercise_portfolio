@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name - Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <style>
+    /* CSS Variables for Light/Dark Mode */
+    :root {
+      --bg-color: white;
+      --text-color: Black;
+      --primary-color: blue;
+      --secondary-color: grey;
+      --footer-bg: white;
+      --footer-text: pink;
+    }
+    
+    [data-theme="dark"] {
+      --bg-color: Black;
+      --text-color: pink;
+      --primary-color: blue;
+      --secondary-color: grey;
+      --footer-bg: black;
+      --footer-text: white;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      transition: background-color 0.3s;
+    }
+    
+    header .navbar-brand, header .nav-link, header .theme-toggle {
+      color: #ffffff !important;
+      transition: color 0.3s;
+    }
+    
+    header .nav-link:hover, header .navbar-brand:hover {
+      color: var(--secondary-color) !important;
+    }
+    
+    /* Home Section */
+    #home {
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    #home img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    
+    #home img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Skills Section */
+    #skills {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    
+    /* Portfolio Section */
+    #portfolio {
+      padding: 60px 0;
+    }
+    
+    #portfolio img {
+      transition: transform 0.3s;
+    }
+    
+    #portfolio img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Testimonials Section */
+    #testimonials {
+      padding: 60px 0;
+      background-color: whitesmoke;
+    }
+    
+    .carousel-item {
+      text-align: center;
+    }
+    
+    .carousel-item p {
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    
+    /* Contact Section */
+    #contact {
+      padding: 60px 0;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    footer a {
+      color: var(--footer-text);
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Light/Dark Mode Toggle */
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    
+    /* Button Hover Effects */
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#home">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="container">
+      <img src="/images (2).jpeg" alt="Your Photo" class="img-fluid">
+      <h1 class="mt-4">Kin Zang Lhamo</h1>
+      
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="text-center mb-5">Technical Skills</h2>
+      <div class="row">
+        <!-- Skill 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-code fa-2x me-3 text-primary"></i>
+            <h5 class="mb-0">HTML</h5>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-paint-brush fa-2x me-3 text-secondary"></i>
+            <h5 class="mb-0">CSS</h5>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-js fa-2x me-3 text-warning"></i>
+            <h5 class="mb-0">JavaScript</h5>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-bootstrap fa-2x me-3 text-info"></i>
+            <h5 class="mb-0">Bootstrap</h5>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="text-center mb-5">My Projects</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="/warehouse-management-software.jpg" class="card-img-top" alt="Project 1" height="250">
+            <div class="card-body">
+              <h5 class="card-title">Department Inventory Management system</h5>
+              <p class="card-text">A web application that allows users to manage their tasks efficiently.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="/labour.jpeg" class="card-img-top" alt="Project 2" height="250">
+            <div class="card-body">
+              <h5 class="card-title">Labour Record Keeping</h5>
+              <p class="card-text">A responsive website designed to showcase my portfolio and skills.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="/confession page.jpeg" class="card-img-top" alt="Project 3" height="250">
+            <div class="card-body">
+              <h5 class="card-title">Confession Page</h5>
+              <p class="card-text">An e-commerce platform that offers a seamless shopping experience.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1ModalLabel">Project 1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="project1.jpg" class="img-fluid mb-3" alt="Project 1">
+            <p>Detailed description of Project 1 goes here. Explain the technologies used, features implemented, challenges faced, and any other relevant information.</p>
+            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project2ModalLabel">Project 2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="project2.jpg" class="img-fluid mb-3" alt="Project 2">
+            <p>Detailed description of Project 2 goes here. Explain the technologies used, features implemented, challenges faced, and any other relevant information.</p>
+            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project3ModalLabel">Project 3</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="project3.jpg" class="img-fluid mb-3" alt="Project 3">
+            <p>Detailed description of Project 3 goes here. Explain the technologies used, features implemented, challenges faced, and any other relevant information.</p>
+            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="text-center mb-5">What People Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <p>"Fantastic developer! Delivered the project on time and exceeded expectations!"</p>
+            <h5>John Doe</h5>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <p>"A pleasure to work with, great communication, and high-quality work!"</p>
+            <h5>Jane Smith</h5>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <p>"Highly skilled and professional. Will hire again for future projects!"</p>
+            <h5>Michael Lee</h5>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Me</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Your Name</p>
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (with Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript for Light/Dark Mode -->
+  <script>
+    const toggleSwitch = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      if (currentTheme === 'dark') {
+        toggleSwitch.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    }
+
+    toggleSwitch.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggleSwitch.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggleSwitch.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    });
+  </script>
+</body>
+</html>
